@@ -1,9 +1,9 @@
 # Assignment 2 — Genetic Algorithm: Knapsack Problem
 ## Observation Report
 
-**Student Name  :** ___________________________  
-**Student ID    :** ___________________________  
-**Date Submitted:** ___________________________  
+**Student Name  :** Appala Laxman
+**Student ID    :** 2310040017 
+**Date Submitted:** 17-03-2026
 
 ---
 
@@ -55,11 +55,11 @@ python ga_knapsack.py
 
 | Metric | Your result |
 |--------|-------------|
-| Number of generations | |
-| Best value at generation 1 | |
-| Final best value | |
-| Total weight of best solution (kg) | |
-| Is solution valid (Yes / No) | |
+| Number of generations |50|
+| Best value at generation 1 |60|
+| Final best value |77|
+| Total weight of best solution (kg) |14.4|
+| Is solution valid (Yes / No) |Yes|
 
 **Copy the printed packing list here:**
 ```
