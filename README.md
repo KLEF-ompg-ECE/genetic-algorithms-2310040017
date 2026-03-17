@@ -65,13 +65,30 @@ python ga_knapsack.py
 
 **Copy the printed packing list here:**
 ```
-[ PASTE PACKING LIST OUTPUT HERE ]
+ Best Packing List
+--------------------------------------
+  + Water bottle
+  + First aid kit
+  + Sleeping bag
+  + Torch
+  + Energy bars (x6)
+  + Rain jacket
+  + Map & compass
+  + Cooking stove
+  + Rope (10 m)
+  + Sunscreen
+  + Power bank
+  + Rope (10 m)
+  + Sunscreen
+  + Power bank
+--------------------------------------
 ```
 
 **Look at `plots/experiment_1.png` and describe what you see (2–3 sentences).**  
 *Where does the biggest improvement happen? Does the curve flatten at some point?*
 ```
-[ YOUR OBSERVATION ]
+The plot shows a rapid increase in the best value during the first few generations, which is where the biggest improvement happens. 
+After this initial phase, the curve begins to flatten out, indicating that the algorithm has found an optimal solution and further improvements are smaller and less frequent.
 ```
 
 ---
@@ -86,19 +103,19 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 
 | mutation_rate | Final best value | Weight (kg) | Valid? | Shape of curve |
 |--------------|-----------------|-------------|--------|----------------|
-| 0.01         |                 |             |        |                |
-| 0.05         |                 |             |        |                |
-| 0.30         |                 |             |        |                |
+| 0.01         |       75          |      14.9       |  Yes      |         Flat  |
+| 0.05         |        77         |       14.4      |  Yes      |          Steep      |
+| 0.30         |        78         |       14.1      |      Yes  |        jagged        |
 
 **Compare the three plots. What happens when mutation is too low? Too high? (3–4 sentences)**  
 *Hint: Too low = no diversity, may get stuck. Too high = random search. What is the sweet spot?*
 ```
-[ YOUR OBSERVATION ]
+Too low (0.01) causes getting stuck in local optima, too high (0.30) is chaotic, and 0.05 is the sweet spot for stable convergence.
 ```
 
 **Which mutation_rate gave the best result? Why do you think that is?**
 ```
-[ YOUR ANSWER ]
+The 0.30 mutation rate gave the best result (78) because the added randomness helped the algorithm escape a local optimum.
 ```
 
 ---
@@ -109,12 +126,12 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 
 | Experiment | Key setting | Final value | Main finding in one sentence |
 |------------|-------------|-------------|------------------------------|
-| 1 — Baseline | mutation_rate = 0.05 | | |
-| 2 — Mutation rate | mutation_rate = ___ | | |
+| 1 — Baseline | mutation_rate = 0.05 | 77 | A balanced mutation rate allows for stable and consistent convergence. |
+| 2 — Mutation rate | mutation_rate = 0.30 | 78 | High mutation rates can sometimes help the algorithm escape local optima. |
 
 **In your own words — what is the most important thing you learned about Genetic Algorithms from these experiments? (3–5 sentences)**
 ```
-[ YOUR REFLECTION ]
+I learned that parameter tuning is critical, as you must perfectly balance exploration (high mutation) and exploitation (low mutation) to find the global best solution.
 ```
 
 ---
